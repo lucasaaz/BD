@@ -1,0 +1,11 @@
+1 - (bloqueio exclusivo (binário)) O escalonamento Sa possui deadlock? Entre quais transações? Qual o escalonamento que efetivamente será executado, considerando a técnica de resolução de deadlock que identifique o deadlock e mate a transação mais recente (aquela em que sua primeira operação se inicie depois da primeira operação das outras).
+
+Sim, o escalamento possiu DeadLock.exemplo de de transaçãp: r1(x) r2(x
+O escalonamento efetivo, para a técnica de resolução de deadlock é a prevenção
+
+2 - ( bloqueio compartilhado (ternário)) O escalonamento Sa possui deadlock? Entre quais transações? Qual o escalonamento que efetivamente será executado, considerando a técnica de resolução de deadlock que identifique o deadlock e mate a transação mais recente (aquela em que sua primeira operação se inicie depois da primeira operação das outras).
+
+Sim, o escalamento possiu DeadLock.exemplo de de transaçãp: r1(x) r2(x
+O escalonamento que efetivamente será executado, considerando a técnica de resolução de deadlock é a prevenção
+
+Não conseguir fazer a atividade por completo, estou com muitas dúvidas, e não conseguir tirar elas vendo seus video e o slide.

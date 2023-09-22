@@ -1,0 +1,75 @@
+1.Projetar o primeiro nome e o último nome dos atores que são diretores;
+
+	select actors.first_name, actors.last_name
+	from actors
+	INTERSECT 
+	select directors.first_name, directors.last_name
+	from directors
+
+
+2.Projetar o primeiro nome e o último nome dos atores que não são diretores;
+
+	select first_name, last_name
+	from actors
+	EXCEPT
+	select first_name, last_name
+	from directors
+
+
+3.Projetar o primeiro nome e o último nome dos atores e diretores;
+
+	select first_name, last_name
+	from actors
+	UNION
+	select first_name, last_name
+	from directors
+
+
+4.Projetar o nome dos filmes que não são dirigidos por nenhum diretor;
+
+select name
+from   movies
+       INNER JOIN
+       ( select id
+         from   movies
+         EXCEPT
+				 select movie_id
+				 from   movies_directors ) as A
+			ON movies.id = A.id
+			
+			
+5.Projetar primeiro nome e o último nome dos atores que não atuaram em pelo menos dois filmes;
+
+select first_name,last_name
+from   actors
+       INNER JOIN
+			 (  select id
+					from   actors
+					EXCEPT				
+					select  A.actor_id
+					  from   (select actor_id, COUNT(*) as TOTAL
+								   	from    roles
+								  	group by actor_id
+									  having   TOTAL > 1 ) as A
+				) as B ON actors.id = B.id
+				
+
+
+6.Projetar, por gênero e ano, o número médio de filmes com menos de dois atores atuando.
+
+select A.genre, B.year, COUNT(*) as TOTAL
+from   movies_genres as A
+       INNER JOIN movies as B
+			   ON A.movie_id = B.id
+			 INNER JOIN
+			 ( select id
+				 from   movies
+				 EXCEPT				
+				 select  A.movie_id
+				 from   ( select movie_id, COUNT(*) as TOTAL
+        				  from    roles
+        				  group by movie_id
+        				  having   TOTAL > 1 ) as A
+				) as C
+				  ON B.id = C.id
+group by A.genre, B.year	

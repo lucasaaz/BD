@@ -1,0 +1,11 @@
+1 - O escalonamento Sa é completo?
+Sim, pois possui todas as operações de cada transação, e as operaçoes de conflito precedem umas as outras.
+
+2 - Considerando que as últimas operações no escalonamento Sa sejam c2, c3, c1, nessa ordem, o escalonamento Sa é recuperável? 
+Sim, as leituras sujas existentes w2(z), w1(x), r3(x), r1(z)
+
+3 - O escalonamento Sa é serializável?
+Não, pois as operações de transações são intercaladas.
+ r3(y) r2(z),  r1(x) r2(x),  r3(z) r2(y),  w3(y) r1(y),  w2(z) w1(x),  r3(x) r1(z
+
+

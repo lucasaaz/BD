@@ -1,0 +1,57 @@
+﻿
+
+                                n       r     t          F              B             U       Consumo de espaço 
+ATORES:                       10000            2                                                    2 
+Código                        10000    16      2        128              78           0            156 
+Nome                          10000   160      2         12             833         128            1666 
+
+Clientes:                    100000            2 
+CPF                          100000    11      2        186             537           2            1074 
+Nome                         100000   160      2         12            8333         128           16666 
+Endereço                     100000   200      2         10           10000          48           20000 
+Telefone                     100000    16      2        128             781           0            1562 
+DataNascimento               100000    12      2        170             588           8            1176 
+Sexo                         100000     1      2       2048              48           0             96 
+
+Filmes:                     2000000            2 
+Código                      2000000    16      2        128           15625           0           31250 
+Nome                        2000000   160      2         12          166666         128            333332 
+Gênero                      2000000    80      2         25           80000          48            160000 
+
+Funcionários:                  3500            2 
+CPF                            3500    11      2        186              18           2             36 
+Nome                           3500   160      2         12             291         128            582 
+CPF_Supervisor                 3500    11      2        186              18           2             36 
+
+Mídias:                    10000000            2 
+Identificador              10000000    24      2         85          117647           8            235294 
+Tipo                       10000000     8      2        256           39062           0           78124 
+PrecoDiário                10000000    24      2         85          117647           8            235294 
+CodFilmes                  10000000    16      2        128           78125           0            156250
+ 
+Aluguel:                   20000000            2 
+DataLocação                20000000    12      2        170          117647           8            235294 
+DataDevolução              20000000    10      2        204           98039           8            196078 
+ValorPagar                 20000000    24      2         85          235294           8            470588 
+CPF_Cliente                20000000    11      2        186          107526           2            215052 
+ID_Mídia                   20000000    24      2         85          235294           8            470588 
+CPF_Funcionário            20000000    11      2        186          107526           2            215052
+ 
+Pagamentos:                50000000            2 
+Código                     50000000    48      2         42         1190476          32          2380952 
+Data                       50000000    12      2        170          294117           8            588234 
+Valor                      50000000    24      2         85          588235           8          1176470 
+CPF_Cliente                20000000    11      2        186          107526           2            215052 
+ID_Mídia                   20000000    24      2         85          235294           8            470588 
+CPF_Funcionário            20000000    11      2        186          107526           2            215052 
+
+AtoresEmFilmes:             1000000            2 
+CodFilme                    1000000    16      2        128            7812           0           15624 
+CodAtor                     1000000    16      2        128            7812           0           15624 
+
+
+n: registros 
+r: tamanho do atributo                      N° de Blocos:      Espaço disperdiçado:            Espaço total: 
+t: tam. Bloco de disco                        4076421                   734                      7961,76 
+F: blocagem  --  B: n° de blocos 
+U: espaço disperdiçado 

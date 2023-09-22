@@ -1,0 +1,51 @@
+Lucas Augusto Azevedo - 712433
+
+1.Projetar o primeiro nome e o último nome dos atores de sexo feminino;
+
+	select first_name, last_name
+	from   actors
+	where  gender = 'F'
+
+
+2.Projetar o nome dos filmes com ano superior à 1999;
+
+	select name
+	from   movies
+	where  year > 1999
+
+
+3.Projetar o nome do filme e o nome do diretor de cada filme;
+
+	select movies.name, directors.first_name, directors.last_name
+	from   movies, directors, movies_directors
+	where  movies_directors.director_id = directors.id 
+       AND  movies_directors.movie_id = movies.id
+
+
+4.Projetar o nome do filme, nome do ator e o papel que cada ator teve no filme para filmes com ranking acima da nota 6;
+
+	select actors.first_name, actors.last_name, movies.name, roles.role
+	from   actors, movies, roles
+	where  roles.actor_id = roles.movie_id
+ 	  AND  rank > 6
+
+
+5.Projetar o nome do diretor e o número de filmes que cada diretor dirigiu;
+
+	select directors.first_name, directors.last_name, COUNT(*) as TOTAL
+	from   movies, directors, movies_directors
+	where  movies_directors.director_id = directors.id 
+
+
+6.Projetar o gênero e o número de filmes de cada gênero; 
+
+	select A.genre, COUNT(*) as TOTAL
+	from movies_genres as A
+	group by A.genre
+
+
+7.Projetar o gênero, o ranking (nota) médio, mínimo e máximo dos filmes do gênero.
+
+	select A.genre, AVG(B.rank) as MEDIA, MIN(B.rank) as MINIMO, MAX(B.rank) as MAXIMO
+	from movies_genres as A INNER JOIN movies as B ON A.movies_id = B.id
+	group by A.genre

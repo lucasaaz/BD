@@ -1,0 +1,55 @@
+1) Projetar o primeiro nome e o último nome dos atores que são diretores;
+
+A = (actors) ⨝ actors.first_name=directors.first_name ∧        actors.last_name=directors.last_name (directors)
+
+π actors.first_name,actors.last_name (A)
+
+
+
+2) Projetar o primeiro nome e o último nome dos atores que não são diretores;
+
+A = (actors) ▷ actors.first_name=directors.first_name ∧ actors.last_name=directors.last_name (directors)
+
+π actors.first_name, actors.last_name (A)
+
+
+sql
+3) Projetar o primeiro nome e o último nome dos atores e diretores;
+
+DIRETORES1 = ρid ← directors.id, first_name ← directors.first_name, last_name ← directors.last_name (directors)
+
+DIRETORES2 = πfirst_name, last_name (DIRETORES1)
+
+ATORES1 = ρid ← actors.id, first_name ← actors.first_name, last_name ← actors.last_name (actors)
+
+ATORES2 = πfirst_name, last_name (ATORES1)
+
+U = ATORES2 ∪ DIRETORES2
+
+π first_name, last_name (U)
+
+
+
+4) Projetar o nome dos filmes que não são dirigidos por nenhum diretor;
+
+FilDiretor1 = (movies) ⨝ movies.id=movies_directors.movie_id  (movies_directors) ⨝ movies_directors.director_id=directors.id (directors)
+
+FilDiretor2 = π movies.id, movies.name, movies.year, movies.rank (FilDiretor1)
+
+Soma = movies - FilDiretor2
+
+π name (S)
+
+
+
+5) Projetar primeiro nome e o último nome dos atores que não atuaram em pelo menos dois filmes;
+
+FilAtores = (movies) ⨝ movies.id=roles.movie_id (roles) ⨝ actor_id=actors.id (actors)
+
+Controle1 = γ actors.id, actors.first_name, actors.last_name;count(movie_id) -> q_filmes (FilAtores)
+
+Controle2 = σ q_filmes ≥ 2 (Controle1)
+
+Soma = Controle1 - Controle2
+
+π first_name,last_name (S)

@@ -1,0 +1,332 @@
+Arquivo Atores
+Atores (10.000 registros) → Codigo (16B), Nome (160B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 176 bytes.
+Quantidade de registros a serem armazenados: 10000
+Tamanho da chave primária: 16 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 11
+Número de blocos necessários: 910
+Espaço Total: 1863680 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 10
+Quantidade de acesso aos blocos de discos por outro campo: 910
+
+# Índice Estático
+Fator de bloco: 64
+Número de blocos necessários: Bm1 15
+Número de blocos necessários: Bm2 1
+Espaço necessário: 32768 bytes
+Pesquisas demandarão 2 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 176 bytes.
+Quantidade de registros a serem armazenados: 10000
+Tamanho da chave: 16 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 32
+Ordem da árvore (Quantidade de filhos da árvore): 47
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 46
+Altura da árvore: 3
+Fator de bloco: 32
+Número de blocos necessários: 313
+Espaço necessário: 641024 bytes
+Pesquisas nesse índice demandarão 3 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+________________________________________________________
+
+
+Arquivo Clientes
+Clientes (100.000 registros) → CPF (11B), Nome (160B), Endereco (200B), Telefone (16B), DataNascimento (12B), Sexo (1B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 400 bytes.
+Quantidade de registros a serem armazenados: 100000
+Tamanho da chave primária: 11 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 5
+Número de blocos necessários: 20000
+Espaço Total: 40960000 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 15
+Quantidade de acesso aos blocos de discos por outro campo: 20000
+
+# Índice Estático
+Fator de bloco: 75
+Número de blocos necessários: Bm1 267
+Número de blocos necessários: Bm2 4
+Espaço necessário: 555008 bytes
+Pesquisas demandarão 3 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 400 bytes.
+Quantidade de registros a serem armazenados: 100000
+Tamanho da chave: 11 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 27
+Ordem da árvore (Quantidade de filhos da árvore): 53
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 52
+Altura da árvore: 3
+Fator de bloco: 36
+Número de blocos necessários: 2778
+Espaço necessário: 5689344 bytes
+Pesquisas nesse índice demandarão 3 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+________________________________________________________
+
+
+Arquivo Filmes
+Filmes (2.000.000 registros) → Codigo (16B), Nome (160B), Genero (80B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 256 bytes.
+Quantidade de registros a serem armazenados: 2000000
+Tamanho da chave primária: 16 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 8
+Número de blocos necessários: 250000
+Espaço Total: 512000000 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 18
+Quantidade de acesso aos blocos de discos por outro campo: 250000
+
+# Índice Estático
+Fator de bloco: 64
+Número de blocos necessários: Bm1 3907
+Número de blocos necessários: Bm2 62
+Espaço necessário: 8128512 bytes
+Pesquisas demandarão 3 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 256 bytes.
+Quantidade de registros a serem armazenados: 2000000
+Tamanho da chave: 16 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 32
+Ordem da árvore (Quantidade de filhos da árvore): 47
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 46
+Altura da árvore: 4
+Fator de bloco: 32
+Número de blocos necessários: 62500
+Espaço necessário: 128000000 bytes
+Pesquisas nesse índice demandarão 4 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+________________________________________________________
+
+
+Arquivo Funcionários
+Funcionarios (3.500registros) → CPF (11B), Nome (160B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 182 bytes.
+Quantidade de registros a serem armazenados: 3500
+Tamanho da chave primária: 11 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 11
+Número de blocos necessários: 319
+Espaço Total: 653312 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 9
+Quantidade de acesso aos blocos de discos por outro campo: 319
+
+# Índice Estático
+Fator de bloco: 75
+Número de blocos necessários: Bm1 5
+Número de blocos necessários: Bm2 1
+Espaço necessário: 12288 bytes
+Pesquisas demandarão 2 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 182 bytes.
+Quantidade de registros a serem armazenados: 3500
+Tamanho da chave: 11 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 27
+Ordem da árvore (Quantidade de filhos da árvore): 53
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 52
+Altura da árvore: 3
+Fator de bloco: 36
+Número de blocos necessários: 98
+Espaço necessário: 200704 bytes
+Pesquisas nesse índice demandarão 3 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+________________________________________________________
+
+
+Arquivo Midias
+Midias (10.000.000 registros) → Identificador (24B), Tipo (8B), PrecoDiaria (24B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 72 bytes.
+Quantidade de registros a serem armazenados: 10000000
+Tamanho da chave primária: 24 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 28
+Número de blocos necessários: 357143
+Espaço Total: 731428864 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 19
+Quantidade de acesso aos blocos de discos por outro campo: 357143
+
+# Índice Estático
+Fator de bloco: 51
+Número de blocos necessários: Bm1 7003
+Número de blocos necessários: Bm2 138
+Espaço necessário: 14624768 bytes
+Pesquisas demandarão 4 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 72 bytes.
+Quantidade de registros a serem armazenados: 10000000
+Tamanho da chave: 24 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 40
+Ordem da árvore (Quantidade de filhos da árvore): 40
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 39
+Altura da árvore: 5
+Fator de bloco: 27
+Número de blocos necessários: 370371
+Espaço necessário: 758519808 bytes
+Pesquisas nesse índice demandarão 5 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+________________________________________________________
+
+
+Arquivo Aluguel
+Aluguel (20.000.000 registros) → DataLocacao (12B), DataDevolucao (10B), ValorPagar (24B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 81 bytes.
+Quantidade de registros a serem armazenados: 20000000
+Tamanho da chave primária: 12 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 25
+Número de blocos necessários: 800000
+Espaço Total: 1638400000 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 20
+Quantidade de acesso aos blocos de discos por outro campo: 800000
+
+# Índice Estático
+Fator de bloco: 73
+Número de blocos necessários: Bm1 10959
+Número de blocos necessários: Bm2 151
+Espaço necessário: 22753280 bytes
+Pesquisas demandarão 4 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 81 bytes.
+Quantidade de registros a serem armazenados: 20000000
+Tamanho da chave: 12 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 28
+Ordem da árvore (Quantidade de filhos da árvore): 51
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 50
+Altura da árvore: 5
+Fator de bloco: 35
+Número de blocos necessários: 571429
+Espaço necessário: 1170286592 bytes
+Pesquisas nesse índice demandarão 5 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+________________________________________________________
+
+
+Arquivo Pagamentos
+Pagamentos (50.000.000registros) → Codigo (48B), Data (12B), Valor (24B)
+
+-Índice multinível estático
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 131 bytes.
+Quantidade de registros a serem armazenados: 50000000
+Tamanho da chave primária: 48 bytes.
+Tamanho do ponteiro: 16 bytes.
+
+# Arquivo Indexado
+Fator de bloco: 15
+Número de blocos necessários: 3333334
+Espaço Total: 6826668032 bytes
+Quantidade de acesso aos blocos de discos pela chave primária: 22
+Quantidade de acesso aos blocos de discos por outro campo: 3333334
+
+# Índice Estático
+Fator de bloco: 32
+Número de blocos necessários: Bm1 104167
+Número de blocos necessários: Bm2 3256
+Espaço necessário: 220002304 bytes
+Pesquisas demandarão 5 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado
+
+-Índice multinível dinâmico
+# Dados:
+Tamanho do bloco de disco: 2048 bytes.
+Tamanho do registro: 131 bytes.
+Quantidade de registros a serem armazenados: 50000000
+Tamanho da chave: 48 bytes.
+Tamanho do ponteiro de nó: 12 bytes.
+Tamanho do ponteiro de bloco: 16 bytes.
+
+# Índice Dinâmico
+Tamanho do elemento: 64
+Ordem da árvore (Quantidade de filhos da árvore): 27
+Quantidade de blocos que o nó ocupa: 1
+Número de elementos por nó: 26
+Altura da árvore: 6
+Fator de bloco: 18
+Número de blocos necessários: 2777778
+Espaço necessário: 5688889344 bytes
+Pesquisas nesse índice demandarão 6 acessos a blocos de disco + 1 acesso para recuperar o registro no arquivo indexado

@@ -1,0 +1,143 @@
+
+             Álgebra Relacional
+
+• Maneira teórica de se manipular o banco de dados relacional
+• Linguagem de consulta procedural
+– usuários especificam os dados necessários e como obtê-los
+• Consiste de um conjunto de operações
+– entrada: uma ou duas relações
+– saída: uma nova relação resultado
+
+  Operações:
+• Fundamentais
+– seleção
+– projeção
+– produto cartesiano
+– renomear
+– união
+– diferença de conjuntos
+
+• Adicionais
+– intersecção de conjuntos
+– junção natural
+– divisão
+– agregação 
+______________________________
+
+  Álgebra Relacional: Seleção:
+
+• Seleciona tuplas que satisfaçam à condição de seleção 
+  [ σ condição_seleção ( tabela ) ]
+• relação
+• resultado de alguma operação da álgebra relacional
+• pode envolver operadores de comparação (=, >, ≥, <, ≤, ≠)
+• pode combinar condições usando-se ∧, ∨, 
+______________________________
+
+  Álgebra Relacional: Projeção
+
+• Projeta as colunas solicitadas (i.e. produz um subconjunto vertical)
+  [ π lista_atributos ( tabela ) ]
+• relação
+• resultado de alguma operação da álgebra relacional
+• lista de atributos
+• os atributos são separados por vírgula
+_______________________________
+
+  Álgebra Relacional: Renomear
+
+• Renomeia
+– nome da relação
+– nomes dos atributos da relação
+– nome da relação e nomes dos atributos
+  [ ρ S(B1,B2, ..., Bn) (relação) ]
+      |     |                 |
+      |  nomes novos dos atributos 
+ nome novo da relação         |
+                         nome antigo da relação
+• Exemplos
+– ρcomprador (cliente)
+– ρ(código, nome, rua, saldo, vendedor) (cliente)
+– ρcomprador (código, nome, rua, saldo, vendedor) (cliente)
+• Observação
+– indicada para ser utilizada quando uma relação é usada mais do que uma vez para responder à consulta
+________________________________
+
+  Álgebra Relacional: Produto Cartesiano
+
+• Combina tuplas de duas relações
+– relações não precisam ter atributos comum
+• Tuplas da relação resultante
+– todas as combinações de tuplas possíveis entre as relações participantes
+  [ relação argumento 1 × relação argumento 2 ]
+• relação
+• resultado de alguma operação da álgebra relacional 
+• grau(atributo): número de atributos de cliente + número de atributos de vendedor
+• número de tuplas: número de tuplas de cliente * número de tuplas de vendedor
+_________________________________
+
+  Operações sobre Conjuntos
+• Unem duas relações
+• Operações
+– união
+– intersecção
+– diferença
+• Características
+– eliminam tuplas duplicadas da relaçãoresultado
+– atuam sobre relações compatíveis
+      |
+      |
+     Duas relações são compatíveis se:
+     • possuem o mesmo grau
+     • seus atributos possuem os mesmos
+       domínios (os domínios dos i-ésimos
+       atributos de cada relação são os mesmos) 
+
+  Álgebra Relacional: Operações sobre Conjuntos
+
+• União (R  S)
+– gera uma relação que contém todas as tuplas
+pertencentes a R, a S, ou a ambas R e S
+• Intersecção (R  S)
+– gera uma relação que contém todas as tuplas
+pertencentes tanto a R quanto a S
+• Diferença (R − S)
+– gera uma relação que contém todas as tuplas
+pertencentes a R que não pertencem a S
+_________________________________
+
+  Álgebra Relacional: Junção
+
+• Concatena tuplas relacionadas de duas relações
+• Passos:
+– forma um produto cartesiano das relações
+– faz uma seleção forçando igualdade sobre os atributos que aparecem nas relações
+
+• Sintaxe
+  [ relação argumento 1 condição_junção relação argumento 2 ]
+
+• (INNER) JOIN
+– R in S
+• somente as tuplas de R que têm tuplas correspondentes em S – e vice-versa – aparecem no resultado
+
+• LEFT(OUTER) JOIN
+– R left S
+• mantém cada tupla de R na tabela de junção
+• preenche com valores nulos as tuplas de S que não correspondem à coluna de junção em R 
+
+• RIGHT (OUTER) JOIN
+– R right S
+• mantém cada tupla de S na tabela de junção
+• preenche com valores nulos as tuplas de R que não correspondem à coluna de junção em S
+
+• FULL [OUTER] JOIN
+– R full S
+• mantém cada tupla de R e de S na tabela de junção
+• preenche com valores nulos as tuplas que não correspondem à coluna de junção
+_________________________________
+
+  Álgebra Relacional: Divisão
+• Divisão de duas relações R e S
+– todos os valores de um atributo de R que fazem referência a todos os valores de um atributo de S
+• Utilizada para consultas que incluam o termo para todos ou em todos
+                                           
